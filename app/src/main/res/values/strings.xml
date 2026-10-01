@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">muziki</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="pref_category_appearance">Appearance</string>
+    <string name="pref_category_library">Library</string>
+    <string name="pref_category_about">About</string>
+
+    <string name="pref_title_grid">Always start in Grid</string>
+    <string name="pref_summary_grid">Show music library as a grid by default</string>
+
+    <string name="pref_title_sort">Default Sorting</string>
+    <string name="pref_summary_sort">Choose how music is ordered on startup</string>
+
+    <!-- ===================== ONBOARDING / WELCOME ===================== -->
+    <string name="welcome_title">Welcome to Muziki</string>
+    <string name="welcome_subtitle">Your music, beautifully organized.</string>
+
+    <string name="welcome_dev_line">Muziki is developed by Mayuto Tresor and published by UserLab Ltd.</string>
+
+    <string name="welcome_privacy_heading">Your Privacy, Respected</string>
+    <string name="welcome_privacy_body">Muziki does not collect, store, or share any of your personal data. Everything you play stays on your own device. We do not track your listening habits, we do not use hidden analytics, and we never sell information to anyone — because there is none to sell.</string>
+
+    <string name="welcome_terms_heading">Terms of Use</string>
+    <string name="welcome_terms_body">Muziki is provided by UserLab Ltd for personal, non-commercial use. By continuing, you agree not to redistribute, repackage, decompile, or resell this application or any part of it. Muziki includes integrity checks that detect tampered or cloned copies; unauthorized copies are not supported and may be blocked from functioning.</string>
+
+    <string name="welcome_anticopy_heading">Protecting Original Work</string>
+    <string name="welcome_anticopy_body">To protect the developer\'s work, Muziki verifies its own package signature and installation source each time it starts. This does not involve reading your personal files or sending any data off your device — it simply confirms the app itself has not been altered or cloned.</string>
+
+    <string name="welcome_scroll_hint">Scroll down to read everything, then accept to continue</string>
+    <string name="welcome_accept">Accept &amp; Continue</string>
+    <string name="welcome_decline">Decline &amp; Exit</string>
+    <string name="welcome_decline_confirm_title">Exit Muziki?</string>
+    <string name="welcome_decline_confirm_msg">You need to accept the terms and privacy policy to use Muziki. Do you want to close the app?</string>
+
+    <!-- ===================== PERMISSIONS GUIDE ===================== -->
+    <string name="perm_title">Almost Ready</string>
+    <string name="perm_subtitle">Muziki needs a couple of permissions to find and play your music.</string>
+
+    <string name="perm_storage_title">Access Your Music Files</string>
+    <string name="perm_storage_body">Allows Muziki to find audio files stored on your device so it can build your library.</string>
+
+    <string name="perm_notif_title">Show Playback Notifications</string>
+    <string name="perm_notif_body">Lets Muziki show the now-playing controls in your notification shade and remind you about music waiting to be played.</string>
+
+    <string name="perm_step_1">Step 1 — Tap \"Grant Access\" below.</string>
+    <string name="perm_step_2">Step 2 — Choose \"Allow\" on the system dialog that appears.</string>
+    <string name="perm_step_3">Step 3 — If Android takes you to a Settings screen instead, turn the permission on and press back to return here.</string>
+
+    <string name="perm_grant_storage">Grant Access</string>
+    <string name="perm_grant_notif">Enable Notifications</string>
+    <string name="perm_all_set">All Set — Continue</string>
+    <string name="perm_skip">Skip for now</string>
+    <string name="perm_granted_label">Granted</string>
+    <string name="perm_pending_label">Not yet granted</string>
+
+    <!-- ===================== NARRATOR / FIRST-RUN TOUR ===================== -->
+    <string name="narrator_welcome">Hi, I\'m your Muziki guide. Let me show you around in a few quick steps.</string>
+    <string name="narrator_library">This is your Library — every song on your device, sorted the way you like.</string>
+    <string name="narrator_player">Tap any song to open the Player, with full playback controls and cover art.</string>
+    <string name="narrator_equalizer">Open the Equalizer any time to shape your sound, or try a preset.</string>
+
+    <!-- ===================== EQUALIZER SCREEN v2 ===================== -->
+    <string name="eq_screen_title">Audio FX</string>
+    <string name="eq_brand_name">MR DJ TREYZO</string>
+    <string name="eq_brand_tagline">Studio Sound Engine</string>
+    <string name="eq_section_presets">PRESET MODES</string>
+    <string name="eq_section_bands">FREQUENCY BANDS</string>
+    <string name="eq_section_bass">BASS BOOST</string>
+    <string name="eq_section_speed_pitch">PLAYBACK SPEED &amp; PITCH</string>
+    <string name="eq_speed_row_label">Speed</string>
+    <string name="eq_pitch_row_label">Pitch</string>
+    <string name="eq_link_pitch_to_speed">Link pitch to speed</string>
+    <string name="eq_speed_pitch_reset">RESET</string>
+    <string name="eq_speed_pitch_unavailable">Playback speed and pitch require Android 6.0 or newer.</string>
+    <string name="eq_section_virtualizer">3D SURROUND</string>
+    <string name="eq_section_reverb">ROOM REVERB</string>
+    <string name="eq_section_loudness">LOUDNESS BOOST</string>
+    <string name="eq_reset_all">Reset All</string>
+    <string name="eq_unavailable">Equalizer is unavailable for this audio session.</string>
+    <string name="eq_bass_unavailable">Bass Boost isn\'t supported on this device.</string>
+    <string name="eq_virtualizer_unavailable">3D Surround isn\'t supported on this device.</string>
+    <string name="eq_reverb_unavailable">Room Reverb isn\'t supported on this device.</string>
+    <string name="eq_loudness_unavailable">Loudness Boost isn\'t supported on this device.</string>
+    <string-array name="eq_reverb_room_names">
+        <item>None</item>
+        <item>Small Room</item>
+        <item>Medium Room</item>
+        <item>Large Room</item>
+        <item>Medium Hall</item>
+        <item>Large Hall</item>
+        <item>Plate</item>
+    </string-array>
+    <string name="narrator_theme">Visit Settings to pick a theme — it changes the whole app instantly.</string>
+    <string name="narrator_done">You\'re all set. Enjoy your music!</string>
+    <string name="narrator_next">Next</string>
+    <string name="narrator_skip_tour">Skip Tour</string>
+    <string name="narrator_finish">Get Started</string>
+
+    <!-- ===================== SETTINGS ===================== -->
+    <string name="pref_category_playback">Playback</string>
+    <string name="pref_category_pro">Muziki Pro</string>
+    <string name="pref_category_support">Support &amp; Info</string>
+
+    <string name="pref_title_theme">App Theme</string>
+    <string name="pref_summary_theme">Choose a background color for the whole app</string>
+
+    <string name="pref_title_dj_mode">Mr DJ Treyzo Mode</string>
+    <string name="pref_summary_dj_mode">A bold neon look with a matching equalizer preset</string>
+    <string name="dj_mode_confirm_title">Enable Mr DJ Treyzo Mode?</string>
+    <string name="dj_mode_confirm_msg">This applies a neon DJ theme across the app and switches your equalizer to the Treyzo preset. You can turn it off any time from Settings.</string>
+    <string name="dj_mode_enabled_toast">Mr DJ Treyzo Mode is live 🎧</string>
+
+    <string name="pref_title_narrator_replay">Replay App Tour</string>
+    <string name="pref_summary_narrator_replay">Watch the first-time walkthrough again</string>
+
+    <string name="pref_title_auto_pause">Smart Auto-Pause</string>
+    <string name="pref_summary_auto_pause">Pause music automatically for calls and video apps</string>
+
+    <string name="pref_title_boot">Start with Device</string>
+    <string name="pref_summary_boot">Keep Muziki ready in the background after restart</string>
+
+    <string name="pref_title_pro">Upgrade to Muziki Pro</string>
+    <string name="pref_summary_pro">Coming soon</string>
+
+    <!-- ===================== NOTIFICATIONS ===================== -->
+    <string name="notif_channel_playback">Muziki Playback</string>
+    <string name="notif_channel_reminder">Muziki Reminders</string>
+    <string name="notif_reminder_title">Your music is waiting 🎵</string>
+    <string name="notif_reminder_body">Pick up where you left off — your favorite tracks are just one tap away.</string>
+
+    <!-- ===================== COMPANY / ABOUT ===================== -->
+    <string name="about_developer">Developed by Mayuto Tresor</string>
+    <string name="about_company">A UserLab Ltd product</string>
+</resources>
+

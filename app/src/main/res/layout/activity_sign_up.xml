@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="28dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="28dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_close_signup"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="14dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:contentDescription="Close"
+            android:src="@drawable/ic_search_clear" />
+
+        <!-- AI badge -->
+        <FrameLayout
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp">
+
+            <View
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/ai_badge_circle_bg" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_ai_sparkle" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Create your account"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sign up to unlock MUZIKI AI"
+            android:textSize="14sp"
+            android:textColor="#757575" />
+
+        <!-- Full name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Full name"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#424242" />
+
+        <EditText
+            android:id="@+id/input_signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="e.g. Aisha Kone"
+            android:textColorHint="#9E9E9E"
+            android:textColor="#212121"
+            android:textSize="15sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext" />
+
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Email address"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#424242" />
+
+        <EditText
+            android:id="@+id/input_signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="you@example.com"
+            android:textColorHint="#9E9E9E"
+            android:textColor="#212121"
+            android:textSize="15sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext" />
+
+        <!-- Password -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Password"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#424242" />
+
+        <EditText
+            android:id="@+id/input_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/input_field_bg"
+            android:hint="At least 6 characters"
+            android:textColorHint="#9E9E9E"
+            android:textColor="#212121"
+            android:textSize="15sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone" />
+
+        <TextView
+            android:id="@+id/txt_signup_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text=""
+            android:textSize="13sp"
+            android:textColor="#E53935"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_do_signup"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_accent_pill"
+            android:text="Create account"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15.5sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textSize="13.5sp"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/txt_go_to_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textSize="13.5sp"
+                android:textStyle="bold"
+                android:textColor="#FF4081" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="MUZIKI AI — a UserLab Ltd revolution update"
+            android:textSize="11.5sp"
+            android:textColor="#BDBDBD"
+            android:gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

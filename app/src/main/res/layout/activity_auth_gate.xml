@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top gradient hero panel -->
+    <LinearLayout
+        android:id="@+id/gate_hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/ai_gradient_bg"
+        android:paddingTop="64dp"
+        android:paddingBottom="46dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+        <FrameLayout
+            android:layout_width="84dp"
+            android:layout_height="84dp">
+
+            <View
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:background="@drawable/gate_icon_ring_bg" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_gate_lock" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="MUZIKI AI"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Sign in required"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gate_hero"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You need a MUZIKI AI account to access this screen. Create a free account or sign in to continue — it only takes a moment."
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#616161"
+            android:gravity="center" />
+
+        <!-- Feature reassurance row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_section_bg"
+            android:padding="18dp"
+            android:layout_marginTop="26dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔒  Your data stays on this device"
+                android:textSize="13.5sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚡  Sign up takes less than a minute"
+                android:textSize="13.5sp"
+                android:textColor="#424242"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✨  Unlocks MUZIKI AI features instantly"
+                android:textSize="13.5sp"
+                android:textColor="#424242" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Action buttons pinned to bottom -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="28dp"
+        android:paddingTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_gate_signup"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@drawable/btn_accent_pill"
+            android:text="Create free account"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="15.5sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_gate_login"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/btn_outline_pill"
+            android:text="I already have an account"
+            android:textAllCaps="false"
+            android:textColor="#424242"
+            android:textSize="15sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_gate_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:background="@android:color/transparent"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="#9E9E9E"
+            android:textSize="14.5sp" />
+    </LinearLayout>
+
+</RelativeLayout>

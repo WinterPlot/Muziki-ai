@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Soft drop shadow so the FAB reads as floating above the list -->
+    <item android:top="3dp">
+        <shape android:shape="oval">
+            <solid android:color="#33000000" />
+        </shape>
+    </item>
+
+    <item android:bottom="2dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#FF4081"
+                android:centerColor="#C238FF"
+                android:endColor="#5B6DFF" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,11 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:propertyName="rotation"
+        android:valueFrom="0"
+        android:valueTo="360"
+        android:duration="6000"
+        android:repeatCount="infinite"
+        android:interpolator="@android:anim/linear_interpolator" />
+</set>
+<!-- Target group: disc_spin_group -->
+

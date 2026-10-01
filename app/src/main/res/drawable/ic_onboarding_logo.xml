@@ -1,0 +1,91 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Outer ring -->
+    <path
+        android:name="ring_outer"
+        android:pathData="M100,20 A80,80 0 1,1 99.9,20"
+        android:strokeColor="#FF4081"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Disc body + grooves + label all rotate together as the vinyl spins -->
+    <group
+        android:name="disc_spin_group"
+        android:pivotX="100"
+        android:pivotY="100">
+
+        <path
+            android:name="disc_body"
+            android:pathData="M100,45 A55,55 0 1,1 99.9,45"
+            android:fillColor="#212121" />
+
+        <path
+            android:name="groove_1"
+            android:pathData="M100,58 A42,42 0 1,1 99.9,58"
+            android:strokeColor="#3A3A3A"
+            android:strokeWidth="1.5"
+            android:fillColor="#00000000" />
+        <path
+            android:name="groove_2"
+            android:pathData="M100,70 A30,30 0 1,1 99.9,70"
+            android:strokeColor="#3A3A3A"
+            android:strokeWidth="1.5"
+            android:fillColor="#00000000" />
+
+        <path
+            android:name="center_label"
+            android:pathData="M100,82 A18,18 0 1,1 99.9,82"
+            android:fillColor="#FF4081" />
+
+        <path
+            android:name="center_hole"
+            android:pathData="M100,96 A4,4 0 1,1 99.9,96"
+            android:fillColor="#FFFFFF" />
+    </group>
+
+    <!-- Tonearm -->
+    <group
+        android:name="tonearm_group"
+        android:pivotX="165"
+        android:pivotY="45"
+        android:rotation="-18">
+        <path
+            android:pathData="M165,45 L145,90"
+            android:strokeColor="#FF4081"
+            android:strokeWidth="5"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000" />
+        <path
+            android:pathData="M165,45 A8,8 0 1,1 164.9,45"
+            android:fillColor="#FF4081" />
+        <path
+            android:pathData="M145,90 A5,5 0 1,1 144.9,90"
+            android:fillColor="#212121" />
+    </group>
+
+    <!-- Sound wave bars (animate scale/alpha) -->
+    <group android:name="bar1_group" android:pivotX="30" android:pivotY="160">
+        <path android:pathData="M27,145 L33,145 L33,160 L27,160 Z" android:fillColor="#FF4081" />
+    </group>
+    <group android:name="bar2_group" android:pivotX="50" android:pivotY="160">
+        <path android:pathData="M47,130 L53,130 L53,160 L47,160 Z" android:fillColor="#FF4081" />
+    </group>
+    <group android:name="bar3_group" android:pivotX="70" android:pivotY="160">
+        <path android:pathData="M67,120 L73,120 L73,160 L67,160 Z" android:fillColor="#FF4081" />
+    </group>
+    <group android:name="bar4_group" android:pivotX="130" android:pivotY="160">
+        <path android:pathData="M127,125 L133,125 L133,160 L127,160 Z" android:fillColor="#FF4081" />
+    </group>
+    <group android:name="bar5_group" android:pivotX="150" android:pivotY="160">
+        <path android:pathData="M147,135 L153,135 L153,160 L147,160 Z" android:fillColor="#FF4081" />
+    </group>
+    <group android:name="bar6_group" android:pivotX="170" android:pivotY="160">
+        <path android:pathData="M167,145 L173,145 L173,160 L167,160 Z" android:fillColor="#FF4081" />
+    </group>
+
+</vector>

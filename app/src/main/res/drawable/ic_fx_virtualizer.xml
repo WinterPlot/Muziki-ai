@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Virtualizer / 3D Surround: a listener point with widening stereo arcs -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M12,10.2 C13,10.2 13.8,11 13.8,12 C13.8,13 13,13.8 12,13.8 C11,13.8 10.2,13 10.2,12 C10.2,11 11,10.2 12,10.2 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M8.2,8.2 C6.9,9.5 6.1,11.15 6.1,12.9 C6.1,14.65 6.9,16.3 8.2,17.6 L7,18.8 C5.35,17.15 4.3,15.05 4.3,12.9 C4.3,10.75 5.35,8.65 7,7 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M15.8,8.2 L17,7 C18.65,8.65 19.7,10.75 19.7,12.9 C19.7,15.05 18.65,17.15 17,18.8 L15.8,17.6 C17.1,16.3 17.9,14.65 17.9,12.9 C17.9,11.15 17.1,9.5 15.8,8.2 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M4.6,4.6 C2.3,6.9 0.9,9.9 0.9,12.9 C0.9,15.9 2.3,18.9 4.6,21.2 L5.8,20 C3.85,18.05 2.7,15.55 2.7,12.9 C2.7,10.25 3.85,7.75 5.8,5.8 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M19.4,4.6 L18.2,5.8 C20.15,7.75 21.3,10.25 21.3,12.9 C21.3,15.55 20.15,18.05 18.2,20 L19.4,21.2 C21.7,18.9 23.1,15.9 23.1,12.9 C23.1,9.9 21.7,6.9 19.4,4.6 Z"/>
+</vector>

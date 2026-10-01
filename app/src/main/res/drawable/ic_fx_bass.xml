@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bass Boost: concentric speaker cone with a heavy low-frequency arc -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M12,3 C7.03,3 3,7.03 3,12 C3,16.97 7.03,21 12,21 C16.97,21 21,16.97 21,12 C21,7.03 16.97,3 12,3 Z M12,19.2 C8.02,19.2 4.8,15.98 4.8,12 C4.8,8.02 8.02,4.8 12,4.8 C15.98,4.8 19.2,8.02 19.2,12 C19.2,15.98 15.98,19.2 12,19.2 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M12,8.4 C9.9,8.4 8.2,10.1 8.2,12.2 C8.2,14.3 9.9,16 12,16 C14.1,16 15.8,14.3 15.8,12.2 C15.8,10.1 14.1,8.4 12,8.4 Z M12,14.2 C10.89,14.2 10,13.31 10,12.2 C10,11.09 10.89,10.2 12,10.2 C13.11,10.2 14,11.09 14,12.2 C14,13.31 13.11,14.2 12,14.2 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M1.2,12 C1.2,10.2 1.65,8.5 2.4,7 L2.4,7 C1.35,8.85 0.9,10.9 0.9,12 C0.9,13.1 1.35,15.15 2.4,17 C1.65,15.5 1.2,13.8 1.2,12 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M22.8,12 C22.8,13.8 22.35,15.5 21.6,17 C22.65,15.15 23.1,13.1 23.1,12 C23.1,10.9 22.65,8.85 21.6,7 C22.35,8.5 22.8,10.2 22.8,12 Z"/>
+</vector>

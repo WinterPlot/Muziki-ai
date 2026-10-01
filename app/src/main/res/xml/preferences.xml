@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Appearance &amp; Style">
+        <Preference
+            android:key="pref_theme_color"
+            android:title="App Theme"
+            android:summary="Tap to choose a background theme" />
+
+        <ListPreference
+            android:key="pref_sort_default"
+            android:title="Default Sorting"
+            android:summary="Choose how music is sorted on startup"
+            android:entries="@array/sort_options"
+            android:entryValues="@array/sort_values"
+            android:defaultValue="title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Playback Features">
+        <Preference
+            android:key="pref_sleep_timer"
+            android:title="Sleep Timer"
+            android:summary="Set a time to stop music automatically" />
+            
+        <CheckBoxPreference
+            android:key="pref_headset_pause"
+            android:title="Pause on Unplug"
+            android:summary="Stop music when headphones are disconnected"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="pref_song_reminder"
+            android:title="Remind Me About My Music"
+            android:summary="Get a notification if you haven't opened Muziki since you last listened"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Library Maintenance">
+        <Preference
+            android:key="pref_cleanup_broken_files"
+            android:icon="@drawable/ic_cleanup_broom"
+            android:title="Clean Up Broken Files"
+            android:summary="Find and remove songs that are missing or deleted from your device" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Support &amp; Contact">
+        <Preference
+            android:key="pref_email"
+            android:title="Email Developer"
+            android:summary="tresormayuto1962@gmail.com" />
+
+        <Preference
+            android:key="pref_whatsapp"
+            android:title="WhatsApp Support"
+            android:summary="+257 62488880" />
+
+        <Preference
+            android:key="pref_official_portal"
+            android:icon="@drawable/ic_portal_globe"
+            android:title="Explore Our Official Portal"
+            android:summary="muziki.42web.io - secure in-app browser" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="About App">
+        <Preference
+            android:key="pref_version"
+            android:title="Version"
+            android:summary="1.5" />
+
+        <Preference
+            android:title="Description"
+            android:summary="Muziki is a lightweight native music player designed for performance."
+            android:selectable="false" />
+
+        <Preference
+            android:title="Copyright"
+            android:summary="© 2026 Mayuto Dev. All rights reserved."
+            android:selectable="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Premium Perks">
+        <Preference
+            android:key="pref_upgrade_pro"
+            android:title="⭐ Upgrade to PRO"
+            android:summary="Remove ads and unlock the Equalizer" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
+

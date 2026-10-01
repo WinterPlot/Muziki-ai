@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/widget_bg"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <ImageButton
+        android:id="@+id/widgetSmallBtnPrev"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:padding="8dp"
+        android:src="@drawable/prev"
+        android:contentDescription="Previous" />
+
+    <ImageView
+        android:id="@+id/widgetSmallArt"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/voice_note"
+        android:background="@drawable/widget_play_button_bg"
+        android:contentDescription="@null" />
+
+    <ImageButton
+        android:id="@+id/widgetSmallBtnPlayPause"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:padding="8dp"
+        android:src="@drawable/play"
+        android:contentDescription="Play" />
+
+    <ImageButton
+        android:id="@+id/widgetSmallBtnNext"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:padding="8dp"
+        android:src="@drawable/next"
+        android:contentDescription="Next" />
+
+</LinearLayout>

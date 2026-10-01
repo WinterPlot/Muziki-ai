@@ -1,0 +1,36 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <group
+        android:name="lock_group"
+        android:pivotX="24"
+        android:pivotY="26"
+        android:scaleX="1"
+        android:scaleY="1">
+
+        <!-- Shackle (the curved metal loop on top of the lock) -->
+        <path
+            android:name="lock_shackle"
+            android:fillColor="#00000000"
+            android:strokeColor="#2ECC71"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:pathData="M16,21 L16,15 C16,10.6 19.6,7 24,7 C28.4,7 32,10.6 32,15 L32,21" />
+
+        <!-- Lock body -->
+        <path
+            android:name="lock_body"
+            android:fillColor="#2ECC71"
+            android:pathData="M12,21 L36,21 C37.66,21 39,22.34 39,24 L39,38 C39,39.66 37.66,41 36,41 L12,41 C10.34,41 9,39.66 9,38 L9,24 C9,22.34 10.34,21 12,21 Z" />
+
+        <!-- Keyhole -->
+        <path
+            android:name="lock_keyhole"
+            android:fillColor="#FFFFFF"
+            android:pathData="M24,27 C25.66,27 27,28.34 27,30 C27,31.2 26.3,32.23 25.3,32.72 L26.2,37 L21.8,37 L22.7,32.72 C21.7,32.23 21,31.2 21,30 C21,28.34 22.34,27 24,27 Z" />
+
+    </group>
+</vector>

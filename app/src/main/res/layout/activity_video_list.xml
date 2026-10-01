@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/videoListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/ai_gradient_bg"
+        android:paddingTop="22dp"
+        android:paddingBottom="18dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnVideoListBack"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:tint="#FFFFFF"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_search_clear" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:text="Videos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtVideoCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12.5sp"
+            android:textColor="#F0FFFFFF" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/videoSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_below="@id/videoListHeader"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/video_search_pill_bg">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/search"
+            android:alpha="0.6"
+            android:tint="#212121" />
+
+        <EditText
+            android:id="@+id/editVideoSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44dp"
+            android:layout_toLeftOf="@+id/btnClearVideoSearch"
+            android:hint="Search videos..."
+            android:singleLine="true"
+            android:background="@android:color/transparent"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textCursorDrawable="@null"
+            android:textSize="14.5sp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnClearVideoSearch"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:contentDescription="Clear search"
+            android:src="@drawable/ic_search_clear"
+            android:tint="#757575"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/videoScanProgress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/videoListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoSearchBar"
+        android:layout_alignParentBottom="true"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/videoEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:alpha="0.35"
+            android:src="@drawable/ic_video_library" />
+
+        <TextView
+            android:id="@+id/txtEmptyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="No videos found on this device"
+            android:textSize="15sp"
+            android:textColor="#616161"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtEmptySubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Videos you save to your device will show up here"
+            android:textSize="12.5sp"
+            android:textColor="#BDBDBD"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

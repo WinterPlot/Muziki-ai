@@ -1,0 +1,52 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Outer vinyl body -->
+    <path
+        android:fillColor="#1B1B1B"
+        android:pathData="M100,4 C154.65,4 199,48.35 199,100 C199,154.65 154.65,196 100,196 C45.35,196 1,154.65 1,100 C1,45.35 45.35,4 100,4 Z"/>
+
+    <!-- Groove rings -->
+    <path
+        android:strokeColor="#2E2E2E"
+        android:strokeWidth="1.4"
+        android:pathData="M100,16 C147.5,16 186,53.5 186,100 C186,146.5 147.5,184 100,184 C53.5,184 16,146.5 16,100 C16,53.5 53.5,16 100,16 Z"/>
+    <path
+        android:strokeColor="#2E2E2E"
+        android:strokeWidth="1.4"
+        android:pathData="M100,32 C138.5,32 170,63.5 170,100 C170,138.5 138.5,170 100,170 C61.5,170 30,138.5 30,100 C30,61.5 61.5,32 100,32 Z"/>
+    <path
+        android:strokeColor="#2E2E2E"
+        android:strokeWidth="1.4"
+        android:pathData="M100,48 C129.8,48 154,72.2 154,100 C154,129.8 129.8,154 100,154 C70.2,154 46,129.8 46,100 C46,70.2 70.2,48 100,48 Z"/>
+    <path
+        android:strokeColor="#2E2E2E"
+        android:strokeWidth="1.2"
+        android:pathData="M100,60 C123,60 142,79 142,100 C142,123 123,142 100,142 C77,142 58,123 58,100 C58,77 77,60 100,60 Z"/>
+
+    <!-- Pink label -->
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M100,68 C117.7,68 132,82.3 132,100 C132,117.7 117.7,132 100,132 C82.3,132 68,117.7 68,100 C68,82.3 82.3,68 100,68 Z"/>
+
+    <!-- Label highlight ring -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.35"
+        android:strokeWidth="2"
+        android:pathData="M100,74 C114.36,74 126,85.64 126,100 C126,114.36 114.36,126 100,126 C85.64,126 74,114.36 74,100 C74,85.64 85.64,74 100,74 Z"/>
+
+    <!-- Center spindle hole -->
+    <path
+        android:fillColor="#1B1B1B"
+        android:pathData="M100,94 C103.31,94 106,96.69 106,100 C106,103.31 103.31,106 100,106 C96.69,106 94,103.31 94,100 C94,96.69 96.69,94 100,94 Z"/>
+
+    <!-- Glare -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.06"
+        android:pathData="M30,40 C55,10 100,4 100,4 C60,10 40,30 25,60 C20,52 24,45 30,40 Z"/>
+</vector>

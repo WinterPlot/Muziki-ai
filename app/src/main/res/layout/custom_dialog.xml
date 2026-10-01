@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song Options"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="12dp"
+        android:textColor="#212121" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/menuPlayNext"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="Play Next"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:textStyle="bold"
+        android:drawablePadding="16dp"
+        android:paddingLeft="8dp"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/menuAddToQueue"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="Add to Queue"
+        android:textSize="16sp"
+        android:textColor="#212121"
+        android:drawablePadding="16dp"
+        android:paddingLeft="8dp"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F5F5F5"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/menuFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="Add to Favorites"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:drawablePadding="16dp"
+        android:paddingLeft="8dp"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/menuRename"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="Rename"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:drawablePadding="16dp"
+        android:paddingLeft="8dp"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/menuShare"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="Share"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:drawablePadding="16dp"
+        android:paddingLeft="8dp"
+        android:background="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/menuDelete"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:text="Delete"
+        android:textSize="16sp"
+        android:textColor="#F44336"
+        android:drawablePadding="16dp"
+        android:paddingLeft="8dp"
+        android:background="?android:attr/selectableItemBackground" />
+
+</LinearLayout>
+

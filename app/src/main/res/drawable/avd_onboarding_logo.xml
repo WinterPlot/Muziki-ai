@@ -1,0 +1,36 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_onboarding_logo">
+
+    <target
+        android:name="disc_spin_group"
+        android:animation="@anim/onboarding_disc_spin" />
+
+    <target
+        android:name="tonearm_group"
+        android:animation="@anim/onboarding_tonearm_drop" />
+
+    <target
+        android:name="bar1_group"
+        android:animation="@anim/onboarding_bar1_pulse" />
+
+    <target
+        android:name="bar2_group"
+        android:animation="@anim/onboarding_bar2_pulse" />
+
+    <target
+        android:name="bar3_group"
+        android:animation="@anim/onboarding_bar3_pulse" />
+
+    <target
+        android:name="bar4_group"
+        android:animation="@anim/onboarding_bar4_pulse" />
+
+    <target
+        android:name="bar5_group"
+        android:animation="@anim/onboarding_bar5_pulse" />
+
+    <target
+        android:name="bar6_group"
+        android:animation="@anim/onboarding_bar6_pulse" />
+
+</animated-vector>

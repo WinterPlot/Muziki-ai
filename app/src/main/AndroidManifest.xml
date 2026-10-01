@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mayuto.dev.muziki"
+    android:versionCode="13"
+    android:versionName="2.5.1">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.mayuto.dev.muziki.permission.INTERNAL_MEDIA_SERVICE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="muziki"
+        android:usesCleartextTraffic="false"
+        android:theme="@style/AppTheme"
+        >
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/welcome_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity
+            android:name=".PermissionGuideActivity"
+            android:label="@string/perm_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="muziki"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.MUSIC_PLAYER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.APP_MUSIC" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PlaylistActivity"
+            android:label="Playlists"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity 
+            android:name=".PlayerActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+        </activity>
+
+        <activity 
+            android:name=".SettingsActivity"
+            android:label="Settings"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+
+        <activity 
+            android:name=".EqualizerActivity"
+            android:label="Equalizer"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light" />
+
+        <activity
+            android:name=".InAppBrowserActivity"
+            android:label="Official Portal"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Light"
+            android:exported="false" />
+
+        <!-- ===================== MUZIKI AI (UserLab Ltd revolution update) ===================== -->
+
+        <activity
+            android:name=".MuzikiAIActivity"
+            android:label="MUZIKI AI"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity
+            android:name=".AuthGateActivity"
+            android:label="Sign in required"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:label="Create account"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="Sign in"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <!-- ===================== MUZIKI VIDEO ===================== -->
+
+        <activity
+            android:name=".VideoListActivity"
+            android:label="Videos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:exported="false" />
+
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:label="MUZIKI Video"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"
+            android:supportsPictureInPicture="true"
+            android:resizeableActivity="true"
+            android:exported="false" />
+
+        <service 
+            android:name=".MusicService"
+            android:foregroundServiceType="mediaPlayback"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="com.mayuto.dev.muziki.permission.INTERNAL_MEDIA_SERVICE" />
+
+        <!-- Restarts the reminder alarm schedule after the device reboots,
+             an app update is installed, or the app package is re-enabled. -->
+        <receiver
+            android:name=".BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Fired daily by AlarmManager. Decides whether to show the
+             "song waiting for you" reminder notification. -->
+        <receiver
+            android:name=".ReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- MEDIUM home screen "now playing" widget: album art + title +
+             prev/play/next controls that talk directly to MusicService.
+             MusicService calls pushUpdateToAllWidgets() directly (in-process)
+             on every play/pause/skip, so the widget always repaints instantly
+             with the real state instead of relying on an implicit broadcast
+             (which Android 8+ can silently drop for manifest receivers) or
+             the OS's slow (30-minute-minimum) periodic widget update. -->
+        <receiver
+            android:name=".MusicWidgetProvider"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_music_control_info" />
+        </receiver>
+
+        <!-- SMALL home screen widget: compact prev/play/next row only. -->
+        <receiver
+            android:name=".MusicWidgetSmallProvider"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_music_small_info" />
+        </receiver>
+
+        <!-- LARGE home screen widget: big "now playing" card with large
+             album art, title/artist, and full controls. -->
+        <receiver
+            android:name=".MusicWidgetLargeProvider"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_music_large_info" />
+        </receiver>
+
+    </application>
+
+</manifest>
+

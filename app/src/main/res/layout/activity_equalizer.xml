@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/eqScrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/eqRootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- ===== MR DJ TREYZO BRAND BANNER ===== -->
+        <LinearLayout
+            android:id="@+id/djBrandBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/dj_treyzo_banner_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/imgDjBrandIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_dj_treyzo_brand"
+                android:contentDescription="@string/eq_brand_name" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDjBrandName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eq_brand_name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08" />
+
+                <TextView
+                    android:id="@+id/txtDjBrandTagline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eq_brand_tagline"
+                    android:textColor="#F8BBD0"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== HEADER ROW: Title + Reset ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/txtEqTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/eq_screen_title"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#212121" />
+
+            <LinearLayout
+                android:id="@+id/btnResetAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="?android:attr/selectableItemBackground"
+                android:padding="8dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_fx_reset" />
+
+                <TextView
+                    android:id="@+id/txtResetAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/eq_reset_all"
+                    android:textSize="13sp"
+                    android:textColor="#757575" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- ===== PRESET CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardPresets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtPresetLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eq_section_presets"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="8dp" />
+
+            <Spinner
+                android:id="@+id/presetSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- ===== FREQUENCY BAND CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardBands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txtBandsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eq_section_bands"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#757575"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="4dp" />
+
+            <LinearLayout
+                android:id="@+id/eqContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <!-- ===== BASS BOOST CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardBass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_fx_bass" />
+
+                <TextView
+                    android:id="@+id/txtBassLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/eq_section_bass"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:letterSpacing="0.1" />
+
+                <CheckBox
+                    android:id="@+id/toggleBass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/toggle_fx_selector"
+                    android:text="" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekBass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000" />
+        </LinearLayout>
+
+        <!-- ===== PLAYBACK SPEED & PITCH CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardSpeedPitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_fx_speed" />
+
+                <TextView
+                    android:id="@+id/txtSpeedPitchLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/eq_section_speed_pitch"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/btnSpeedPitchResetSection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eq_speed_pitch_reset"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF4081"
+                    android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Speed row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eq_speed_row_label"
+                    android:textSize="13sp"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:id="@+id/txtSpeedValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="1.00x"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF4081" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="150" />
+
+            <!-- Pitch row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/eq_pitch_row_label"
+                    android:textSize="13sp"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:id="@+id/txtPitchValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="1.00x"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF4081" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekPitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="150" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <CheckBox
+                    android:id="@+id/toggleLinkPitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="@string/eq_link_pitch_to_speed"
+                    android:textSize="12.5sp"
+                    android:textColor="#616161" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== 3D SURROUND / VIRTUALIZER CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardVirtualizer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_fx_virtualizer" />
+
+                <TextView
+                    android:id="@+id/txtVirtualizerLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/eq_section_virtualizer"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:letterSpacing="0.1" />
+
+                <CheckBox
+                    android:id="@+id/toggleVirtualizer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/toggle_fx_selector"
+                    android:text="" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekVirtualizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000" />
+        </LinearLayout>
+
+        <!-- ===== ROOM REVERB CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardReverb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_fx_reverb" />
+
+                <TextView
+                    android:id="@+id/txtReverbLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/eq_section_reverb"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:letterSpacing="0.1" />
+
+                <CheckBox
+                    android:id="@+id/toggleReverb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/toggle_fx_selector"
+                    android:text="" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/reverbSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- ===== LOUDNESS ENHANCER CARD ===== -->
+        <LinearLayout
+            android:id="@+id/cardLoudness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_fx_loudness" />
+
+                <TextView
+                    android:id="@+id/txtLoudnessLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/eq_section_loudness"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:letterSpacing="0.1" />
+
+                <CheckBox
+                    android:id="@+id/toggleLoudness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/toggle_fx_selector"
+                    android:text="" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekLoudness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="2000" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

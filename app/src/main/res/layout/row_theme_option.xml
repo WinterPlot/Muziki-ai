@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <View
+        android:id="@+id/swatchColor"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="@drawable/theme_swatch_ring" />
+
+    <TextView
+        android:id="@+id/themeLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:textSize="16sp"
+        android:text="Theme name" />
+
+    <ImageView
+        android:id="@+id/imgSelectedCheck"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_theme_selected"
+        android:visibility="gone" />
+
+</LinearLayout>

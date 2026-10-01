@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:gravity="center_horizontal"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/widgetLargeArt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/voice_note"
+        android:background="@drawable/widget_play_button_bg"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/widgetLargeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="No song playing"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/widgetLargeArtist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        android:text="Tap to open muziki"
+        android:textColor="#B0AFAC"
+        android:textSize="12sp"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/widgetLargeBtnPrev"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:src="@drawable/prev"
+            android:contentDescription="Previous" />
+
+        <ImageButton
+            android:id="@+id/widgetLargeBtnPlayPause"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/widget_play_button_bg"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            android:src="@drawable/play"
+            android:contentDescription="Play" />
+
+        <ImageButton
+            android:id="@+id/widgetLargeBtnNext"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            android:src="@drawable/next"
+            android:contentDescription="Next" />
+
+    </LinearLayout>
+
+</LinearLayout>

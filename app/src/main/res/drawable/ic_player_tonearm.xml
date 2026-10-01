@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="70dp"
+    android:height="70dp"
+    android:viewportWidth="70"
+    android:viewportHeight="70">
+
+    <!-- Base hinge -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M52,6 C57.52,6 62,10.48 62,16 C62,21.52 57.52,26 52,26 C46.48,26 42,21.52 42,16 C42,10.48 46.48,6 52,6 Z"/>
+    <path
+        android:fillColor="#616161"
+        android:pathData="M52,10 C55.31,10 58,12.69 58,16 C58,19.31 55.31,22 52,22 C48.69,22 46,19.31 46,16 C46,12.69 48.69,10 52,10 Z"/>
+
+    <!-- Arm -->
+    <path
+        android:strokeColor="#757575"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M52,16 L14,58"/>
+
+    <!-- Headshell -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M8,54 L20,54 L20,64 L8,64 Z"
+        android:strokeColor="#FF4081"
+        android:strokeWidth="1.5"/>
+
+    <!-- Needle tip accent -->
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M6,62 L10,62 L8,68 Z"/>
+</vector>

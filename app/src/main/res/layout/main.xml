@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/muziki_background">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:elevation="6dp"
+        android:background="@drawable/app_header_bg">
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Muziki"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            android:letterSpacing="0.01" />
+
+        <LinearLayout
+            android:id="@+id/statsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerText"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/dotNowPlaying"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/dot_live_indicator"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtLibraryStats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#E0FFFFFF"
+                android:textSize="11.5sp"
+                android:letterSpacing="0.01" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/searchPill"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_toLeftOf="@+id/buttonContainer"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/search_pill_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/search"
+                android:alpha="0.85"
+                android:tint="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="44dp"
+                android:layout_toLeftOf="@+id/btnClearSearch"
+                android:hint="Search music..."
+                android:singleLine="true"
+                android:background="@android:color/transparent"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#CCFFFFFF"
+                android:textCursorDrawable="@null"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnClearSearch"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:contentDescription="Clear search"
+                android:src="@drawable/ic_search_clear"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnSearchTrigger"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:tint="#FFFFFF"
+                android:contentDescription="Search"
+                android:src="@drawable/search" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnSort"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:tint="#FFFFFF"
+                android:contentDescription="Sort"
+                android:src="@drawable/ic_sort_custom" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnViewToggle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:tint="#FFFFFF"
+                android:contentDescription="Toggle view"
+                android:src="@drawable/view_module" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnMuzikiAI"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:tint="#FFFFFF"
+                android:contentDescription="MUZIKI AI"
+                android:src="@drawable/ic_ai_sparkle" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPlaylists"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:tint="#FFFFFF"
+                android:contentDescription="Playlists"
+                android:src="@drawable/ic_playlist" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="10dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:tint="#FFFFFF"
+                android:contentDescription="Settings"
+                android:src="@drawable/more_vert" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/tabBarWrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="#FFFFFF"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/tab_bar_track">
+
+            <View
+                android:id="@+id/tabIndicator"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/tab_indicator_pill" />
+
+            <LinearLayout
+                android:id="@+id/tabBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/btnTabAll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="ALL SONGS"
+                    android:textSize="9.5sp"
+                    android:letterSpacing="0.02"
+                    android:textStyle="bold"
+                    android:textColor="#FF4081"
+                    android:drawableTop="@drawable/ic_tab_all_songs"
+                    android:drawablePadding="3dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+                <TextView
+                    android:id="@+id/btnTabAlbum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="FOLDERS"
+                    android:textSize="9.5sp"
+                    android:letterSpacing="0.02"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:drawableTop="@drawable/ic_tab_folder"
+                    android:drawablePadding="3dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+                <TextView
+                    android:id="@+id/btnTabFav"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="FAVORITES"
+                    android:textSize="9.5sp"
+                    android:letterSpacing="0.02"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:drawableTop="@drawable/ic_tab_star"
+                    android:drawablePadding="3dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+                <TextView
+                    android:id="@+id/btnTabSmart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="SMART"
+                    android:textSize="9.5sp"
+                    android:letterSpacing="0.02"
+                    android:textStyle="bold"
+                    android:textColor="#757575"
+                    android:drawableTop="@drawable/ic_tab_smart"
+                    android:drawablePadding="3dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tabBarWrap"
+        android:background="#EEEEEE" />
+
+    <!-- Pull-to-refresh indicator, sits above the list and reveals on downward drag -->
+    <LinearLayout
+        android:id="@+id/pullRefreshContainer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@+id/divider"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imgPullRefresh"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/ic_pull_refresh" />
+
+        <TextView
+            android:id="@+id/txtPullRefreshLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Pull to refresh"
+            android:textColor="#9E9E9E"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/miniPlayer"
+        android:layout_below="@+id/divider">
+
+        <GridView
+            android:id="@+id/songGridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="1"
+            android:verticalSpacing="2dp"
+            android:horizontalSpacing="8dp"
+            android:stretchMode="columnWidth"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="8dp"
+            android:clipToPadding="false"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/emptyStateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/emptyStateIconBg"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:background="@drawable/empty_state_circle_bg">
+
+                <ImageView
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_empty_state" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtEmptyStateMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="No songs found"
+                android:textColor="#616161"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Pull down to refresh your library"
+                android:textColor="#BDBDBD"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Quick access: floating button to jump into the video library.
+         Sits bottom-right, floating just above the mini player so it never
+         overlaps active playback controls, and re-anchors to the very
+         bottom-right when nothing is currently playing. -->
+    <FrameLayout
+        android:id="@+id/fabWatchVideos"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_above="@id/miniPlayer"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/fab_video_bg"
+        android:contentDescription="Watch videos"
+        android:elevation="6dp">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_video_quick_access" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/miniPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/mini_player_bg"
+        android:elevation="12dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnMiniPlayPause"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:padding="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mini_play_ring"
+            android:scaleType="fitCenter"
+            android:contentDescription="Play or pause"
+            android:src="@drawable/plays" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/btnMiniPlayPause"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtMiniTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Not Playing"
+                android:textColor="#212121"
+                android:textSize="15.5sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Tap to open player"
+                android:textColor="#9E9E9E"
+                android:textSize="11.5sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/miniAnim"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="1dp"
+            android:progressDrawable="@drawable/progress_bar_mini"
+            android:indeterminate="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
