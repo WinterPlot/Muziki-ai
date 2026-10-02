@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
+    namespace "com.mayuto.dev.muziki"
     compileSdkVersion 35
 
     defaultConfig {
@@ -33,4 +34,3 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.7.1'
 }
-
